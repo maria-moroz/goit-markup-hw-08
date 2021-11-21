@@ -1,0 +1,59 @@
+.project-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.project-section__title {
+  @extend %hidden;
+}
+
+.projects-filter {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.projects-filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.projects-filter__button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: 4px;
+
+  transition: background-color $transition-duration $transition-timing-function,
+    color $transition-duration $transition-timing-function,
+    box-shadow $transition-duration $transition-timing-function;
+
+  background-color: $secondary-bg-white-color;
+  color: $title-text-color;
+
+  font-family: 'Roboto', sans-serif;
+  border-style: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-white-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.project-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  transition: box-shadow $transition-duration $transition-timing-function;
+}

@@ -1,0 +1,44 @@
+.activity-section {
+  @extend %section;
+}
+
+.activity-section__title {
+  @extend %section__title;
+}
+
+.activity-list {
+  @extend %list;
+  display: flex;
+}
+
+.activity {
+  width: calc((100% - 2 * 30px) / 3);
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.activity__image {
+  display: block;
+}
+
+.activity__overlay {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.activity__name {
+  margin: 0;
+  color: $primary-white-color;
+}

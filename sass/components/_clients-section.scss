@@ -1,0 +1,52 @@
+.clients-section {
+  @extend %section;
+}
+
+.clients-section__title {
+  @extend %section__title;
+}
+
+.client-list {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+}
+
+.client {
+  width: calc((100% - 5 * 30px) / 6);
+  height: 90px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.client__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid $links-no-hover-color;
+  border-radius: 4px;
+
+  transition: border $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    cursor: pointer;
+  }
+}
+
+.client__icon {
+  fill: $links-no-hover-color;
+  transition: fill $transition-duration $transition-timing-function;
+
+  .client__link:hover &,
+  .client__link:focus & {
+    fill: $accent-color;
+  }
+}
