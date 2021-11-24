@@ -9,6 +9,7 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
+    document.body.classList.toggle("is-open");
     refs.modal.classList.toggle('backdrop-modal--hidden');
   }
 })();

@@ -1,5 +1,15 @@
 .feature-section {
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: 481px) {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 0;
+  }
 }
 
 .feature-section__title {
@@ -9,12 +19,33 @@
 .feature-list {
   @extend %list;
   display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $mobile) {
+    display: block;
+  }
 }
 
 .feature {
-  width: calc((100% - 3 * 30px) / 4);
-  &:not(:last-child) {
-    margin-right: 30px;
+  width: 100%;
+
+  @media screen and (min-width: 481px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -41,10 +72,18 @@
   letter-spacing: 0.03em;
 
   text-transform: uppercase;
+
+  @media screen and (max-width: $mobile) {
+    text-align: center;
+  }
 }
 
 .feature__description {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
 }

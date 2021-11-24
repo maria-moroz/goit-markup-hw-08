@@ -17,47 +17,107 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="container page-header__container">
-        <nav class="site-nav">
-          <a href="./index.html" lang="en" class="logo page-header__logo">
-            <span class="logo__part">Web</span>Studio
-          </a>
-          <ul class="header-menu">
-            <li class="header-menu__item">
-              <a href="./index.html" class="header-menu__link header-menu__link--active">Студия</a>
+      <div class="page-header__container">
+        <a href="./index.html" lang="en" class="logo page-header__logo">
+          <span class="logo__part">Web</span>Studio
+        </a>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav>
+            <ul class="header-nav">
+              <li class="header-nav__item">
+                <a href="./index.html" class="header-nav__link header-nav__link--active">Студия</a>
+              </li>
+              <li class="header-nav__item">
+                <a href="./portfolio.html" class="header-nav__link">Портфолио</a>
+              </li>
+              <li class="header-nav__item">
+                <a href="" class="header-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header-auth">
+            <li class="header-auth__item">
+              <a href="mailto:info@devstudio.com" class="header-auth__link mail">
+                <svg class="header-auth__icon" width="16" height="12">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="header-menu__item">
-              <a href="./portfolio.html" class="header-menu__link">Портфолио</a>
-            </li>
-            <li class="header-menu__item">
-              <a href="" class="header-menu__link">Контакты</a>
+            <li class="header-auth__item">
+              <a href="tel:+380961111111" class="header-auth__link tel">
+                <svg class="header-auth__icon" width="9" height="16">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="header-auth">
-          <li class="header-auth__item">
-            <a href="mailto:info@devstudio.com" class="header-auth__link">
-              <svg class="header-auth__icon" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header-auth__item">
-            <a href="tel:+380961111111" class="header-auth__link">
-              <svg class="header-auth__icon" width="9" height="16">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="header-social">
+            <li class="header-social__item">
+              <a
+                class="header-social__link"
+                href="https://www.instagram.com/?hl=ru"
+                rel="noopener norefferer"
+                target="_blank"
+                >Instagram
+              </a>
+            </li>
+            <li class="header-social__item">
+              <a
+                class="header-social__link"
+                href="https://twitter.com/home"
+                rel="noopener norefferer"
+                target="_blank"
+                >Twitter
+              </a>
+            </li>
+            <li class="header-social__item">
+              <a
+                class="header-social__link"
+                href="https://uk-ua.facebook.com/"
+                rel="noopener norefferer"
+                target="_blank"
+                >Facebook
+              </a>
+            </li>
+            <li class="header-social__item">
+              <a
+                class="header-social__link"
+                href="https://ua.linkedin.com/"
+                rel="noopener norefferer"
+                target="_blank"
+                >LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+            class="menu-button__icon"
+          >
+            <use class="menu-button__icon--close" href="../images/sprite.svg#close"></use>
+            <use class="menu-button__icon--menu" href="../images/sprite.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
       <section class="hero">
-        <h1 class="hero__title">Эффективные решения<br />для вашего бизнеса</h1>
-        <button type="button" class="data-modal__open" data-modal__open>Заказать услугу</button>
+        <div class="hero-container">
+          <h1 class="hero__title">Эффективные решения<br />для вашего бизнеса</h1>
+          <button type="button" class="data-modal__open" data-modal__open>Заказать услугу</button>
+        </div>
       </section>
       <section class="feature-section">
         <div class="container">
@@ -452,83 +512,85 @@
     </main>
     <footer class="page-footer">
       <div class="container page-footer__container">
-        <div class="page-footer__info">
-          <a href="./index.html" lang="en" class="logo page-footer__logo">
-            <span class="logo__part">Web</span>Studio
-          </a>
-          <ul class="footer-links-list">
-            <li class="footer-links-list__item">
-              <address>
+        <div class="page-footer__contacts">
+          <div class="page-footer__info">
+            <a href="./index.html" lang="en" class="logo page-footer__logo">
+              <span class="logo__part">Web</span>Studio
+            </a>
+            <ul class="footer-links-list">
+              <li class="footer-links-list__item">
+                <address>
+                  <a
+                    class="footer-link__address"
+                    rel="noopener norefferer"
+                    target="_blank"
+                    href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
+                  >
+                    г. Киев, пр-т Леси Украинки, 2
+                  </a>
+                </address>
+              </li>
+              <li class="footer-links-list__item">
+                <a href="mailto:info@devstudio.com" class="footer-link__auth">info@devstudio.com</a>
+              </li>
+              <li class="footer-links-list__item">
+                <a href="tel:+380961111111" class="footer-link__auth">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__join">
+            <b class="join-title">Присоединяйтесь</b>
+            <ul class="social-links-list">
+              <li class="social-links-list__item">
                 <a
-                  class="footer-link__address"
+                  class="social-link social-link--dark"
+                  href="https://www.instagram.com/?hl=ru"
                   rel="noopener norefferer"
                   target="_blank"
-                  href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
                 >
-                  г. Киев, пр-т Леси Украинки, 2
+                  <svg class="social-link__icon--dark" width="20" height="20">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
                 </a>
-              </address>
-            </li>
-            <li class="footer-links-list__item">
-              <a href="mailto:info@devstudio.com" class="footer-link__auth">info@devstudio.com</a>
-            </li>
-            <li class="footer-links-list__item">
-              <a href="tel:+380961111111" class="footer-link__auth">+38 096 111 11 11</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__join">
-          <b class="join-title">Присоединяйтесь</b>
-          <ul class="social-links-list">
-            <li class="social-links-list__item">
-              <a
-                class="social-link social-link--dark"
-                href="https://www.instagram.com/?hl=ru"
-                rel="noopener norefferer"
-                target="_blank"
-              >
-                <svg class="social-link__icon--dark" width="20" height="20">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links-list__item">
-              <a
-                class="social-link social-link--dark"
-                href="https://twitter.com/home"
-                rel="noopener norefferer"
-                target="_blank"
-              >
-                <svg class="social-link__icon--dark" width="20" height="20">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links-list__item">
-              <a
-                class="social-link social-link--dark"
-                href="https://uk-ua.facebook.com/"
-                rel="noopener norefferer"
-                target="_blank"
-              >
-                <svg class="social-link__icon--dark" width="20" height="20">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links-list__item">
-              <a
-                class="social-link social-link--dark"
-                href="https://ua.linkedin.com/"
-                rel="noopener norefferer"
-                target="_blank"
-              >
-                <svg class="social-link__icon--dark" width="20" height="20">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+              </li>
+              <li class="social-links-list__item">
+                <a
+                  class="social-link social-link--dark"
+                  href="https://twitter.com/home"
+                  rel="noopener norefferer"
+                  target="_blank"
+                >
+                  <svg class="social-link__icon--dark" width="20" height="20">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links-list__item">
+                <a
+                  class="social-link social-link--dark"
+                  href="https://uk-ua.facebook.com/"
+                  rel="noopener norefferer"
+                  target="_blank"
+                >
+                  <svg class="social-link__icon--dark" width="20" height="20">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links-list__item">
+                <a
+                  class="social-link social-link--dark"
+                  href="https://ua.linkedin.com/"
+                  rel="noopener norefferer"
+                  target="_blank"
+                >
+                  <svg class="social-link__icon--dark" width="20" height="20">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="subscribe-form">
           <div class="subscribe-container">
@@ -603,6 +665,7 @@
         <button type="submit" class="submit-button">Отправить</button>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

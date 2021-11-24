@@ -1,6 +1,11 @@
 .project-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .project-section__title {
@@ -11,11 +16,49 @@
   @extend %list;
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: $mobile) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: -4px;
+    margin-left: -4px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: -4px;
+    margin-left: -4px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
-.projects-filter__item:not(:last-child) {
-  margin-right: 8px;
+.projects-filter__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-bottom: 15px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-bottom: 15px;
+  }
 }
 
 .projects-filter__button {
@@ -56,4 +99,8 @@
   display: flex;
   flex-wrap: wrap;
   transition: box-shadow $transition-duration $transition-timing-function;
+  @media screen and (max-width: $mobile) {
+    display: block;
+    margin-bottom: -30px;
+  }
 }

@@ -1,5 +1,12 @@
 .activity-section {
   @extend %section;
+  display: none;
+}
+
+@media screen and (min-width: $desktop) {
+  .activity-section {
+    display: block;
+  }
 }
 
 .activity-section__title {

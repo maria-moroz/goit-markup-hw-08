@@ -10,6 +10,91 @@
 .staff-list {
   @extend %list;
   display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $mobile) {
+    display: block;
+    margin-bottom: -30px;
+  }
+}
+
+.staff {
+  width: 100%;
+
+  background-color: $primary-white-color;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.staff__image {
+  display: block;
+  width: 100%;
+}
+
+.staff__text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  text-align: center;
+}
+
+.staff__member {
+  margin-bottom: 10px;
+
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.staff__description {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+/*
+.staff-section {
+  @extend %section;
+  background-color: $secondary-bg-white-color;
+}
+
+.staff-section__title {
+  @extend %section__title;
+}
+
+.staff-list {
+  @extend %list;
+  display: flex;
 }
 
 .staff {
@@ -55,3 +140,5 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
+*/
