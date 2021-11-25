@@ -20,6 +20,7 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -30px;
 
   @media screen and (max-width: $mobile) {
     display: block;
@@ -28,16 +29,13 @@
 
 .feature {
   width: 100%;
+  margin-bottom: 30px;
 
-  @media screen and (min-width: 481px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     width: calc((100% - 30px) / 2);
 
     &:not(:nth-child(2n)) {
       margin-right: 30px;
-    }
-
-    &:not(:nth-last-child(-n + 2)) {
-      margin-bottom: 30px;
     }
   }
 

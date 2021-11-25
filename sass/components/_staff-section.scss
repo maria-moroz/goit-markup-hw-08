@@ -11,34 +11,27 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -30px;
 
   @media screen and (max-width: $mobile) {
     display: block;
-    margin-bottom: -30px;
   }
 }
 
 .staff {
   width: 100%;
+  margin-bottom: 30px;
 
   background-color: $primary-white-color;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: $mobile) {
-    margin-bottom: 30px;
-  }
-
-  @media screen and (min-width: 481px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) {
     width: calc((100% - 30px) / 2);
 
     &:not(:nth-child(2n)) {
       margin-right: 30px;
-    }
-
-    &:not(:nth-last-child(-n + 2)) {
-      margin-bottom: 30px;
     }
   }
 
