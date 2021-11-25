@@ -2,7 +2,7 @@
   transition: box-shadow $transition-duration $transition-timing-function;
   margin-bottom: 30px;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     width: calc((100% - 30px) / 2);
 
     &:not(:nth-child(2n)) {
