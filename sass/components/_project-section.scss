@@ -99,8 +99,9 @@
   display: flex;
   flex-wrap: wrap;
   transition: box-shadow $transition-duration $transition-timing-function;
+  margin-bottom: -30px;
+
   @media screen and (max-width: $mobile) {
     display: block;
-    margin-bottom: -30px;
   }
 }
